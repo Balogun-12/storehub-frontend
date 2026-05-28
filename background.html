@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Store Theme</title>
+
+    <link rel="stylesheet" href="background.css">
+
+</head>
+
+<body>
+<div class="app">
+    <div class="theme-container">
+
+        <!-- TOP BAR -->
+        <div class="top-bar">
+
+            <button class="back-btn" onclick="goBack()">
+                ←
+            </button>
+
+            <h1>Store Theme</h1>
+        </div>
+
+        <!-- PRODUCTS BACKGROUND -->
+        <div class="theme-box">
+
+            <label>
+                Products Background Colour
+            </label>
+
+            <input type="color" id="productsBgColor" value="#f7c4c4">
+
+        </div>
+
+        <!-- BUSINESS NAME -->
+        <div class="theme-box">
+
+            <label>
+                Business Name Colour
+            </label>
+
+            <input type="color" id="businessNameColor" value="#ffffff">
+
+        </div>
+
+        <!-- DESCRIPTION -->
+        <div class="theme-box">
+
+            <label>
+                Description Colour
+            </label>
+
+            <input type="color" id="descriptionColor" value="#ffffff">
+
+        </div>
+
+        <!-- SMALL TEXT -->
+        <div class="theme-box">
+
+            <label>
+                Small Text Colour
+            </label>
+
+            <input type="color" id="smallTextColor" value="#f1f1f1">
+
+        </div>
+
+        <!-- TEXT SHADOW -->
+        <div class="theme-check">
+
+            <input type="checkbox" id="enableShadow">
+
+            <span>
+                Enable Text Shadow
+            </span>
+
+        </div>
+
+        <!-- SAVE BUTTON -->
+        <button onclick="saveTheme()" class="save-btn">
+
+            Save Changes
+
+        </button>
+
+        <!-- RESET -->
+        <button onclick="resetTheme()" class="reset-btn">
+
+            Reset Default
+
+        </button>
+</div>
+
+
+<script src="background.js"></script>
+
+</body>
+</html>

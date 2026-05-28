@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StoreHub Feed</title>
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0a1f66">
+    <link rel="stylesheet" href="Storehub22.css">
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- =========================
+         TOP BAR
+    ========================== -->
+<div class="header">
+
+    <div class="logo">StoreHub</div>
+
+    <div class="header-actions">
+
+        <div class="search-icon" onclick="openSearch()">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+
+        <div class="message-icon">
+            <a href="javascript:void(0)" class="nav-item" onclick="goDashboard()">
+                <i class="fa-solid fa-user"></i>
+            </a>
+        </div>
+
+    </div>
+
+</div>
+
+    <!-- =========================
+         FEED (SCROLL AREA)
+    ========================== -->
+    <div class="feed" id="feed">
+        <!-- JS injects posts here -->
+    </div>
+
+
+    <!-- =========================
+         SIDE ACTIONS
+    ========================== -->
+
+
+</div>
+
+<!-- SCRIPT (CORRECT POSITION) -->
+<script src="storehub.js"></script>
+
+</body>
+</html>

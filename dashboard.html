@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dashboard</title>
+
+<!-- ICONS -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<!-- CSS -->
+<link rel="stylesheet" href="dashboard.css">
+
+</head>
+
+<body>
+
+<div class="app">
+
+<!-- TOP BAR -->
+<div class="top-bar">
+
+    <div class="greeting">
+
+        <button class="back-btn" onclick="goBack()">
+            <i class="fa-solid fa-arrow-left"></i>
+        </button>
+
+        <span>
+            Hi, <span id="helloUsername"></span>
+        </span>
+
+    </div>
+
+    <div class="menu-btn" onclick="toggleMenu()">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+
+</div>
+
+<!-- DROPDOWN MENU -->
+<div class="dropdown-menu" id="dropdownMenu">
+
+    <a href="#" onclick="openStore()">
+        <i class="fa-solid fa-store"></i> Store
+    </a>
+
+    <a href="edit-profile.html">
+        <i class="fa-solid fa-user-pen"></i> Edit Profile
+    </a>
+ 
+    <a href="background.html">
+        <i class="fa-solid fa-palette"></i> Colour Theme
+    </a>
+
+    <a href="homepagecolor.html">
+        <i class="fa-solid fa-house"></i> Background Image
+    </a>
+
+    <a href="productedittable.html">
+        <i class="fa-solid fa-box"></i> Product Table
+    </a>
+
+    <a href="dashboard.html">
+        <i class="fa-solid fa-chart-line"></i> Dashboard
+    </a>
+
+    <a href="contact.html">
+        <i class="fa-solid fa-headset"></i> Contact Support
+    </a>
+
+    <a href="feedback.html">
+        <i class="fa-solid fa-comment-dots"></i> Feedback
+    </a>
+    
+    <a href="#" onclick="logout()">
+        <i class="fa-solid fa-right-from-bracket"></i> Logout
+    </a>
+
+</div>
+
+<!-- STORE CARD -->
+<div class="store-card">
+
+    <div class="logo-box">
+        <img id="businessLogo">
+    </div>
+
+    <div class="store-info">
+
+        <h3 id="businessName"></h3>
+
+        <p class="store-link">
+            <i class="fa-solid fa-globe"></i>
+            <span id="storeLink">https://store.hub</span>
+        </p>
+
+        <div class="actions">
+
+            <button onclick="copyLink()">
+                <i class="fa-regular fa-copy"></i> Copy link
+            </button>
+
+            <button onclick="shareStore()">
+                <i class="fa-solid fa-share"></i> Share link
+            </button>
+
+        </div>
+
+        <div class="main-buttons">
+
+            <button onclick="viewStore()">
+                <i class="fa-regular fa-eye"></i> View Store
+            </button>
+
+            <button onclick="editProfile()">
+                <i class="fa-regular fa-user"></i> Edit Profile
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- PRODUCTS -->
+<div class="section-title">
+    <i class="fa-solid fa-box"></i> Products
+</div>
+
+<div class="product-buttons">
+
+    <button onclick="addProduct()">
+        <i class="fa-solid fa-plus"></i> Add Product
+    </button>
+
+    <button onclick="viewUpdates()">
+        <i class="fa-regular fa-eye"></i> View Updates
+    </button>
+
+</div>
+
+<!-- VIDEO SECTION -->
+<div class="video-section">
+
+    <button onclick="videoComingSoon()">
+        <i class="fa-solid fa-video"></i>
+        Create Store Post
+    </button>
+
+</div>
+
+<!-- QR + ANALYTICS -->
+<div class="dashboard-bottom">
+
+    <!-- QR SIDE -->
+    <div class="qr-section">
+
+        <div class="qr-box" id="qrcode"></div>
+
+        <p class="qr-text">
+            <span id="qrUsername"></span>
+        </p>
+
+    </div>
+
+    <!-- ANALYTICS SIDE -->
+    <div class="analytics">
+
+        <div class="card">
+            <div class="card-top">
+                <i class="fa-solid fa-box"></i>
+                <p>Total Products</p>
+                <h3 id="totalProducts">0</h3>
+            </div>
+            
+        </div>
+
+        <div class="card">
+            <div class="card-top">
+                <i class="fa-solid fa-eye"></i>
+                <p>Customer Views</p>
+                <h3 id="customerViews">0</h3>
+            </div>
+        </div>            
+
+        <div class="card">
+            <div class="card-top">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <p>Total Orders</p>
+                <h3 id="totalOrders">0</h3>
+            </div>            
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+<script src="https://cdnjs.Cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="dashboard.js"></script>
+
+</body>
+</html>

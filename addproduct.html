@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="addproduct.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <div class="app">
+        <div class="setup-page">
+            <h2>Add your product</h2>
+            <form onsubmit="saveProduct(event)" class="setup-form">
+                <!--PRODUCT IMAGE-->
+                <div class="form-group">
+                    <label for="">PRODUCT IMAGE</label>
+                    <input type="file" accept="image/*"  id="productImage" required>
+                </div>
+                <!--PRODUCT NAME-->
+                <div class="form-group">
+                    <label for="">Product Name</label>
+                    <input type="text" placeholder="eg. Black Jean" id="productName" required>
+                </div>
+                <div class="row">
+                    <!--PRICE-->
+                    <div class="form-group small">
+                        <label for="">Price</label>
+                        <input type="text" placeholder="eg. NGN 5000" id="productPrice" required>
+                    </div>
+                    <!--STATUS--> 
+                    <div class="form-group small">
+                        <label for="">Status</label>
+                        <select class="status-select" name="" id="productStatus" required>
+                            <option value="New">New</option>
+                            <option value="Sold">Sold</option>
+                            <option value="Available">Available</option>
+                        </select>
+                    </div>
+                </div>
+                <!--STOREUSERNAME (auto filled)-->
+                <div class="form-group">
+                    <label for="">Store Username</label>
+                    <input type="text" id="storeUser" readonly>
+                </div>
+                <button type="submit" class="button1"> Save Product </button>
+            </form>
+        </div>
+    </div>
+    <script src="add-products.js"></script>
+
+</body>
+</html>

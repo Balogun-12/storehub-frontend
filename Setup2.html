@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setup 2</title>
+    <link rel="stylesheet" href="storehub1.css">
+</head>
+<body>
+
+<div class="app">
+
+    <div class="setup-page">
+
+        <form class="setup-form" onsubmit="continueSetup(event)">
+
+            <h2>Contact Information</h2>
+
+            <div class="form-group">
+                <label>Whatsapp Number</label>
+                <input type="tel" id="whatsapp" required>
+            </div>
+
+            <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" id="email" required>
+            </div>
+
+            <div class="form-group">
+                <label>Store Username</label>
+                <input type="text" id="storeUsername" placeholder="eg. hairplug_123" required>
+
+                <div class="i">
+                    lowercase letters, numbers, underscore only
+                </div>
+            </div>
+
+            <button type="submit" class="button">
+                Continue
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+<script src="setup2.js"></script>
+
+</body>
+</html>

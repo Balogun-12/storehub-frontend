@@ -1,0 +1,138 @@
+/* =========================
+   BASE APP
+========================= */
+
+body {
+    max-width: 420px;
+    margin: 0 auto;
+    background: #f5f5f5;
+    font-family: Arial;
+    height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    padding: 10px;
+    font-family: Tahoma;
+}
+
+.app {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background: white;
+    overflow: hidden;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+.header-actions {
+    display: flex;
+    gap: 15px;
+}
+
+/* =========================
+   FEED
+========================= */
+
+.feed {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+/* =========================
+   SIDE ICONS
+========================= */
+
+.side-icons {
+    position: absolute;
+    right: 10px;
+    top: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.action-icon {
+    background: white;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* =========================
+   BOTTOM NAV
+========================= */
+
+.bottom-nav {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    border-top: 1px solid #eee;
+    background: white;
+}
+
+.nav-item {
+    font-size: 20px;
+    color: #777;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 10px;
+    transition: 0.2s ease;
+}
+
+/* =========================
+   ACTIVE TAB SYSTEM
+========================= */
+
+.nav-item.active {
+    background: #e6f0ff;
+    color: #007bff;
+}
+
+/* HOME ACTIVE */
+.home-active .nav-home {
+    background: #e6f0ff;
+    color: #007bff;
+}
+
+/* USER ACTIVE */
+.user-active .nav-user {
+    background: #e6f0ff;
+    color: #007bff;
+}
+
+/* =========================
+   HOVER EFFECTS
+========================= */
+
+.nav-item:hover {
+    background: #f0f0f0;
+}
+
+/* =========================
+   ICON STATES
+========================= */
+
+.liked {
+    color: red;
+}
+
+.saved {
+    color: gold;
+}

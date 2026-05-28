@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+    <title>Store View</title>
+
+    <link rel="stylesheet"
+    href="view-store.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<div class="mobile-container">
+
+    <!-- =========================
+         HERO SECTION
+    ========================== -->
+
+    <section class="hero-section">
+
+        <!-- FLOATING BADGE -->
+        <div class="floating-badge">
+
+            20 new arrivals 🔥
+
+        </div>
+
+        <!-- HERO CONTENT -->
+    <!-- HERO CONTENT -->
+    <div class="hero-content">
+
+        <!-- BUSINESS NAME -->
+        <h1 id="businessName"></h1>
+
+        <!-- USER DESCRIPTION -->
+        <p id="storeDescription">
+        </p>
+
+        <!-- SMALL STATIC TEXT -->
+        <p class="hero-small-text">
+
+            Discover premium quality products
+            for your lifestyle and everyday needs
+
+        </p>
+
+        <!-- GET STARTED -->
+        <button
+        class="get-started-btn"
+        onclick="scrollToProducts()">
+
+            Get Started
+            <span>⬇⬇⬇</span>
+
+        </button>
+
+    </div>
+
+    </section>
+
+
+    <!-- =========================
+         PRODUCTS SECTION
+    ========================== -->
+
+    <section class="products-section">
+
+        <!-- SEARCH + LOGO -->
+        <div class="top-search">
+
+            <!-- SEARCH -->
+            <div class="search-box">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                type="text"
+                id="searchInput"
+                placeholder="Search products..."
+                onkeyup="searchProducts()">
+
+            </div>
+
+            <!-- LOGO -->
+            <div class="store-logo">
+
+                <img
+                id="storeLogo"
+                src=""
+                alt="">
+
+            </div>
+
+        </div>
+
+
+        <!-- NEW ARRIVALS -->
+        <div class="new-arrivals-box">
+
+            <div class="arrival-left">
+
+                <h2>
+
+                    New <br>
+                    arrivals
+
+                </h2>
+
+            </div>
+
+            <div class="arrival-right">
+
+                <i class="fa-solid fa-sliders"></i>
+
+            </div>
+
+        </div>
+
+
+        <!-- FILTER BUTTONS -->
+    <div class="status-filters">
+
+        <button class="all active" onclick="setFilter(this,'all')">
+            All
+        </button>
+
+        <button class="new" onclick="setFilter(this,'new')">
+            New
+        </button>
+
+        <button class="available" onclick="setFilter(this,'available')">
+            Available
+        </button>
+
+        <button class="sold" onclick="setFilter(this,'sold')">
+            Sold
+        </button>
+
+    </div>
+
+
+        <!-- PRODUCTS GRID -->
+        <div
+        class="products-grid"
+        id="productsGrid">
+
+        </div>
+
+    </section>
+
+</div>
+
+<script src="view-store.js"></script>
+
+</body>
+</html>

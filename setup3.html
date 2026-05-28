@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="storehub1.css">
+</head>
+<body>
+    <div class="app">
+        <div class="setup-page">
+            <h2>Add your first product</h2>
+            <form onsubmit="saveProduct(event)" class="setup-form">
+                <!--PRODUCT IMAGE-->
+                <div class="form-group">
+                    <label for="">PRODUCT IMAGE</label>
+                    <input type="file" id="productImage" accept="image/*" required>
+                </div>
+                <!--PRODUCT NAME-->
+                <div class="form-group">
+                    <label for="">Product Name</label>
+                    <input type="text" id="productName" placeholder="eg. Black Jean" required>
+                </div>
+                <div class="row">
+                    <!--PRICE-->
+                    <div class="form-group small">
+                        <label for="">Price</label>
+                        <input type="text" id="productPrice" placeholder="eg. NGN 5000" required>
+                    </div>
+                    <!--STATUS--> 
+                    <div class="form-group small">
+                        <label for="">Status</label>
+                        <select class="status-select" name="" id="productStatus" required>
+                            <option value="New">New</option>
+                            <option value="Sold">Sold</option>
+                            <option value="Available">Available</option>
+                        </select>
+                    </div>
+                </div>
+                <!--STOREUSERNAME (auto filled)-->
+                <div class="form-group">
+                    <label for="">Store Username</label>
+                    <input type="text" id="storeUser" readonly>
+                </div>
+                <button type="submit" class="button1"> Save & Continue </button>
+            </form>
+        </div>
+    </div>
+<script src="setup3.js"> </script>
+</body>
+</html>

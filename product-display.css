@@ -1,0 +1,125 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#ffffff;   /* light clean grey instead of pure white */
+    margin: 0;
+    padding: 0;
+}
+/* =========================
+   PHONE CONTAINER
+========================= */
+
+.product-page{
+    width:100%;
+    min-height:100vh;
+
+    background:#ffffff;
+
+    padding: 70px 30px 45px;
+
+    display:flex;
+    flex-direction:column;
+
+    align-items:stretch;
+    gap:14px;
+}
+/* =========================
+   IMAGE WRAPPER
+========================= */
+
+.image-wrapper{
+    max-width:100%;
+    height: 100%;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:14px;
+    background: #f5f5f5;
+    padding: 20px;
+}
+
+/* =========================
+   BIG PRODUCT IMAGE
+========================= */
+
+.big-image{
+    width:100%;
+    height:auto;
+
+    object-fit:contain;  /* 🔥 fills space properly for all image types */
+
+    display:block;
+    border-radius:14px;
+    background:#fff;
+}
+
+/* =========================
+   PRODUCT NAME
+========================= */
+
+#productName{
+    font-size:47px;
+    font-weight:bold;
+    color:#111;
+
+    width:100%;
+    text-align:center;
+    text-transform:capitalize;
+}
+
+/* =========================
+   PRICE
+========================= */
+
+#productPrice{
+    font-size:33px;
+    font-weight:bold;
+    color:#fd2121;
+
+    width:100%;
+    text-align:center;
+}
+
+/* =========================
+   BUY BUTTON
+========================= */
+
+.buy-btn{
+    width:100%;
+    max-width: 340px;
+    margin: 10px auto 0;
+    border:none;
+    background:#055a24;
+    color:white;
+    padding:18px;
+    border-radius:12px;
+    font-size:36px;
+    font-weight:bold;
+    cursor:pointer;
+    margin-top:10px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:480px){
+
+    .product-page{
+        padding:20px 14px;
+    }
+
+    #productName{
+        font-size:20px;
+    }
+
+    #productPrice{
+        font-size:16px;
+    }
+}

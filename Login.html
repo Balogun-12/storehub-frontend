@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="app">
+        <div class="container"> 
+            <h2>Login to Store</h2>
+
+            <form onsubmit="loginUser(event)">
+
+                <div class="form-group">
+                    <label>Store Username</label>
+                    <input type="text" id="storeUsername" required>
+                </div>
+
+                <div class="form-group">
+                    <label>WhatsApp Number</label>
+                    <input type="text" id="whatsapp" required>
+                </div>
+
+                <button type="submit" class="save-btn">
+                    Login
+                </button>
+
+            </form>
+        </div>
+</div>
+
+<script src="login.js"></script>
+</body>
+</html>

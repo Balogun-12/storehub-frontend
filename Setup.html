@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StoreHub Setup</title>
+    <link rel="stylesheet" href="storehub1.css">
+</head>
+<body>
+
+<div class="app">
+
+    <div class="setup-page">
+
+        <form class="setup-form" onsubmit="createStore(event)">
+
+            <h2 class="lets">Let's setup your store</h2>
+
+            <!-- LOGO -->
+            <div class="form-group">
+                <label>Business Logo</label>
+                <input type="file" accept="image/*" id="logo" required>
+            </div>
+
+            <!-- BUSINESS NAME -->
+            <div class="form-group">
+                <label>Business Name</label>
+                <input type="text" placeholder="Business name" id="businessName" required>
+            </div>
+
+            <!-- DESCRIPTION -->
+            <div class="form-group">
+                <label>Describe your products</label>
+                <input type="text" placeholder="Quality Shirt and Jeans" id="description" required>
+            </div>
+
+            <button type="submit" class="button">
+                Create Store
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+<script src="Setup.js"></script>
+
+</body>
+</html>
