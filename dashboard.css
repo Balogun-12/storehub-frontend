@@ -20,7 +20,7 @@ body{
 }
 .container {
     max-width: 480px;
-    margin: 6px 16px;
+    margin: 6px 18px;
     min-height: 100vh;
     background:#fff;
     border-radius: 14px;
