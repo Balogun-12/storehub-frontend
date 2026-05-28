@@ -393,10 +393,13 @@ if ("serviceWorker" in navigator) {
 
 function goDashboard() {
 
-    if (!storeId) {
-        window.location.href = "create.html";
+    const storeId = localStorage.getItem("storeId");
+    const isLoggedIn = localStorage.getItem("isLoggedIn");
+
+    if (!storeId || isLoggedIn !== "true") {
+        window.location.href = "./create.html";
         return;
     }
 
-    window.location.href = `dashboard.html?id=${storeId}`;
+    window.location.href = "./dashboard.html?id=" + storeId;
 }
