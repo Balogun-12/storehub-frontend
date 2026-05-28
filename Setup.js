@@ -69,7 +69,7 @@ function createStore(event) {
                 logo: compressedImage
             };
 
-            const res = await fetch('${BASE_URL}/api/store', {
+            const res = await fetch(`${BASE_URL}/api/store`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
