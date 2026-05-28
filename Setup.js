@@ -42,17 +42,16 @@ function compressImage(file, callback) {
 ========================= */
 
 function createStore(event) {
-
     event.preventDefault();
 
-    let businessName =
-        document.getElementById("businessName").value;
+    let businessName = document.getElementById("businessName").value;
+    let description = document.getElementById("description").value;
+    let file = document.getElementById("logo").files[0];
 
-    let description =
-        document.getElementById("description").value;
-
-    let file =
-        document.getElementById("logo").files[0];
+    if (!businessName || !description) {
+        alert("Please fill all fields");
+        return;
+    }
 
     if (!file) {
         alert("Please select a logo image");
@@ -77,26 +76,37 @@ function createStore(event) {
                 body: JSON.stringify(data)
             });
 
-            const result = await res.json();
+            // safety check (prevents JSON crash)
+            const text = await res.text();
+            let result;
 
-            if (result.success) {
+            try {
+                result = JSON.parse(text);
+            } catch (e) {
+                console.log("Backend response:", text);
+                alert("Server returned invalid response");
+                return;
+            }
+
+            if (res.ok && result.success) {
 
                 alert("Store created successfully");
 
                 // SAVE STORE ID FOR STEP 2
-                localStorage.setItem(
-                    "storeId",
-                    result.store._id
-                );
+                localStorage.setItem("storeId", result.store._id);
 
-                window.location.href = "setup2.html";
+                // OPTIONAL: also store step 1 data (useful for recovery)
+                localStorage.setItem("businessName", businessName);
+                localStorage.setItem("description", description);
+                localStorage.setItem("logo", compressedImage);
+
+                window.location.href = "/setup2.html";
 
             } else {
-                alert(result.error);
+                alert(result.error || "Failed to create store");
             }
 
         } catch (error) {
-
             console.log(error);
             alert("Server error");
         }
