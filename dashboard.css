@@ -10,13 +10,20 @@ body{
 
 .app{
     width:100%;
-    background:#fff;
     min-height:100vh;
     padding:18px 16px 30px;
     box-sizing:border-box;
     position:relative;
+    background: #f4f6fb;
+    justify-content: center;
+    display: flex;
 }
-
+.container {
+    max-width: 480px;
+    margin: auto;
+    min-height: 100vh;
+    background:#fff;
+}
 
 /* =========================
    TOP BAR
