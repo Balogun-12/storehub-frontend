@@ -397,9 +397,9 @@ function goDashboard() {
     const isLoggedIn = localStorage.getItem("isLoggedIn");
 
     if (!storeId || isLoggedIn !== "true") {
-        window.location.href = "./create.html";
+        window.location.href = "/create.html";
         return;
     }
 
-    window.location.href = "./dashboard.html?id=" + storeId;
+    window.location.href = "/dashboard.html?id=" + storeId;
 }
