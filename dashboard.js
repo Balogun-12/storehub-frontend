@@ -2,10 +2,7 @@
    CONFIG
 ========================= */
 
-const BASE_URL =
-  window.location.hostname.includes("192.168")
-    ? "http://192.168.225.154:5000"
-    : "https://storehub-backend-1d97.onrender.com";
+const BASE_URL = "https://storehub-backend-1d97.onrender.com";
 
 /* =========================
    GET STORE ID
