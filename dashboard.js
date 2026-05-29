@@ -15,7 +15,7 @@ params.get("id") ||
 localStorage.getItem("storeId");
 
 if (!storeId) {
-    window.location.href = "Create.html";
+    window.location.href = "/create.html";
 }
 
 /* =========================
@@ -340,7 +340,7 @@ function logout() {
 
     localStorage.removeItem("cachedDashboard");
 
-    window.location.href = "create.html";
+    window.location.href = "/create.html";
 }
 
 function trackEvent(eventName, data = {}) {

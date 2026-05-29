@@ -13,7 +13,7 @@ const storeId = localStorage.getItem("storeId");
 const username = localStorage.getItem("storeUsername");
 
 if (isLoggedIn !== "true") {
-    window.location.href = "Create.html";
+    window.location.href = "/create.html";
 }
 
 /* =========================

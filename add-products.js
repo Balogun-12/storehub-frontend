@@ -3,7 +3,7 @@ const BASE_URL = "https://storehub-backend-1d97.onrender.com";
 const isLoggedIn = localStorage.getItem("isLoggedIn");
 
 if (isLoggedIn !== "true") {
-    window.location.href = "Create.html";
+    window.location.href = "/create.html";
 }
 
 /* =========================

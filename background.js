@@ -4,7 +4,7 @@ const storeId = localStorage.getItem("storeId");
 
 if (!storeId) {
     alert("Store not found");
-    window.location.href = "create.html";
+    window.location.href = "/create.html";
 }
 
 /* =========================

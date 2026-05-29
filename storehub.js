@@ -48,7 +48,7 @@ function checkAuth() {
 function handleUserClick() {
 
     if (!storeId || isLoggedIn !== "true") {
-        window.location.href = "create.html";
+        window.location.href = "/create.html";
         return;
     }
 

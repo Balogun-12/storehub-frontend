@@ -45,7 +45,7 @@ function goDashboard() {
     const storeId = localStorage.getItem("storeId");
 
     if (!storeId) {
-        window.location.href = "create.html";
+        window.location.href = "/create.html";
         return;
     }
 

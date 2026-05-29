@@ -11,7 +11,7 @@ const storeId = localStorage.getItem("storeId");
 
 if (!storeId) {
     alert("Store not found. Please login again.");
-    window.location.href = "create.html";
+    window.location.href = "/create.html";
 }
 
 /* =========================

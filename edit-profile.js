@@ -3,7 +3,7 @@ const BASE_URL = "https://storehub-backend-1d97.onrender.com";
 const isLoggedIn = localStorage.getItem("isLoggedIn");
 
 if (isLoggedIn !== "true") {
-    window.location.href = "Create.html";
+    window.location.href = "/create.html";
 }
 
 let storeId = localStorage.getItem("storeId");
@@ -11,7 +11,7 @@ let storeId = localStorage.getItem("storeId");
 // 🔥 FIXED: stronger session validation
 if (!storeId || storeId === "undefined" || storeId === "null") {
     alert("Session expired. Please login again.");
-    window.location.href = "Create.html";
+    window.location.href = "/create.html";
 }
 
 /* =========================
@@ -199,7 +199,7 @@ function goDashboard() {
     const storeId = localStorage.getItem("storeId");
 
     if (!storeId) {
-        window.location.href = "create.html";
+        window.location.href = "/create.html";
         return;
     }
 

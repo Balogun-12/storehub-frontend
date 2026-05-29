@@ -3,7 +3,7 @@ const storeId = params.get("id");
 
 if (!storeId) {
     alert("Store not found");
-    window.location.href = "create.html";
+    window.location.href = "/create.html";
 }
 
 /* =========================
