@@ -192,7 +192,7 @@ async function savePost(event) {
 
     try {
 
-        const res = await fetch('${BASE_URL}/api/post', {
+        const res = await fetch(`${BASE_URL}/api/post`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -209,7 +209,7 @@ async function savePost(event) {
 
         alert("Post published successfully");
 
-        window.location.href = `index.html?id=${storeId}`;
+        window.location.href = `/index.html?id=${storeId}`;
 
     } catch (error) {
         console.log("POST ERROR:", error);
