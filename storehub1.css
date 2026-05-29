@@ -79,13 +79,16 @@
     transform: scale(0.95);
 }
 .create-page {
-    height: 100vh;
+    min-height: 100vh;
     max-width: 420px;
     margin: 0 auto;
+
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+
+    padding: 24px 16px 40px; /* 🔥 better breathing space */
+
     background-color: rgb(252, 249, 249);
     box-sizing: border-box;
 }
@@ -112,16 +115,14 @@
     justify-content: center;
 }
 .e-commerce img {
-    width: 900px;
+    width: 330px;
     max-width: 100%;
     height: auto;
-}
-.auth-buttons {
-    margin-top: 60px;
+}.auth-buttons {
+    margin-top: 40px;
     width: 100%;
     display: flex;
-    flex-direction: row;
-    gap: 40px;
+    gap: 16px;   /* 🔥 reduced from 40px */
     justify-content: center;
 }
 .btn {
