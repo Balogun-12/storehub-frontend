@@ -291,12 +291,12 @@ function shareStore() {
 
 function viewStore() {
     window.location.href =
-    `view-store.html?id=${storeId}`;
+    `/view-store.html?id=${storeId}`;
 }
 
 function viewUpdates() {
     window.location.href =
-    `view-store.html?id=${storeId}`;
+    `/view-store.html?id=${storeId}`;
 }
 
 function toggleMenu() {
@@ -307,27 +307,27 @@ function toggleMenu() {
 
 function addProduct() {
     window.location.href =
-    "addproduct.html";
+    "/addproduct.html";
 }
 
 function editProfile() {
     window.location.href =
-    `edit-profile.html?id=${storeId}`;
+    `/edit-profile.html?id=${storeId}`;
 }
 
 function videoComingSoon() {
     window.location.href =
-    "create-post.html";
+    "/create-post.html";
 }
 
 function openStore() {
     window.location.href =
-    `view-store.html?id=${storeId}`;
+    `/view-store.html?id=${storeId}`;
 }
 
 function goBack() {
     window.location.href =
-    "index.html";
+    "/index.html";
 }
 
 function logout() {
@@ -340,7 +340,7 @@ function logout() {
 
     localStorage.removeItem("cachedDashboard");
 
-    window.location.href = "Create.html";
+    window.location.href = "create.html";
 }
 
 function trackEvent(eventName, data = {}) {
