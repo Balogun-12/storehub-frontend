@@ -1,22 +1,14 @@
 const BASE_URL = "https://storehub-backend-1d97.onrender.com";
 
-const isLoggedIn = localStorage.getItem("isLoggedIn");
-
-if (isLoggedIn !== "true") {
-    window.location.href = "/create.html";
-}
-
 /* =========================
-   SESSION
+   SESSION CHECK
 ========================= */
 
 const storeId = localStorage.getItem("storeId");
 const storeUsername = localStorage.getItem("storeUsername");
 
 if (!storeId || !storeUsername) {
-    console.log("No store session found");
-    window.location.replace("dashboard.html");
-    throw new Error("Missing store session");
+    window.location.href = "/create.html";
 }
 
 /* =========================
