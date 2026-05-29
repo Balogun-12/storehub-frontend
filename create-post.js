@@ -216,3 +216,10 @@ async function savePost(event) {
         alert("Server error");
     }
 }
+/* =========================
+   BACK BUTTON
+========================= */
+
+function goBack() {
+    window.location.href = "/dashboard.html?id=" + storeId;
+}
