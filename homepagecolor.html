@@ -1,46 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage Background Settings</title>
     <link rel="stylesheet" href="homepagecolor.css">
 </head>
 
 <body>
 
-<div class="container">
+    <div class="app">
 
-    <!-- TOP BAR -->
-    <div class="top-bar">
+        <div class="container">
 
-        <button class="back-btn" onclick="goBack()">
-            ←
-        </button>
+            <!-- TOP BAR -->
+            <div class="top-bar">
 
-        <h2 class="page-title">Customize Store Background</h2>
-    </div>    
+                <button class="back-btn" onclick="goBack()">
+                    ←
+                </button>
 
-    <!-- IMAGE UPLOAD -->
-    <label>Upload Background Image</label>
-    <input type="file" id="bgImage" accept="image/*">
+                <h2 class="page-title">Customize Store Background</h2>
+            </div>    
 
-    <!-- BRIGHTNESS CONTROL -->
-    <label>Brightness</label>
-    <input type="range" id="brightness" min="0.7" max="1.5" step="0.05" value="1">
+            <!-- IMAGE UPLOAD -->
+            <label>Upload Background Image</label>
+            <input type="file" id="bgImage" accept="image/*">
 
-    <!-- PREVIEW -->
-    <div class="preview-box" id="previewBox">
-        Preview will show here
+            <!-- BRIGHTNESS CONTROL -->
+            <label>Brightness</label>
+            <input type="range" id="brightness" min="0.7" max="1.5" step="0.05" value="1">
+
+            <!-- PREVIEW -->
+            <div class="preview-box" id="previewBox">
+                Preview will show here
+            </div>
+
+            <!-- BUTTONS -->
+            <button onclick="saveChanges()">Save Changes</button>
+
+            <button onclick="deleteBackground()" class="delete-btn">
+                Reset to Default
+            </button>
+
+        </div>
+
     </div>
 
-    <!-- BUTTONS -->
-    <button onclick="saveChanges()">Save Changes</button>
-
-    <button onclick="deleteBackground()" class="delete-btn">
-        Reset to Default
-    </button>
-
-</div>
 
 <script src="homepagecolor.js"></script>
 
