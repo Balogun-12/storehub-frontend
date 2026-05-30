@@ -84,9 +84,11 @@ function renderDashboard(store) {
 
         qrBox.innerHTML = "";
 
-        const username = localStorage.getItem("storeUsername");
+        const username =
+        localStorage.getItem("storeUsername");
 
-        const publicLink = `https://storehub.com/${username}`;
+        const publicLink =
+        `${window.location.origin}/${username}`;
 
         if (typeof QRCode !== "undefined") {
 
@@ -102,7 +104,6 @@ function renderDashboard(store) {
             });
         }
     }
-
     /* ANALYTICS */
 
     const products =
@@ -232,7 +233,7 @@ function copyLink() {
         return;
     }
 
-    const link = `https://storehub.com/${username}`;
+    const link = `${window.location.origin}/${username}`;
 
     const textArea = document.createElement("textarea");
     textArea.value = link;
@@ -262,7 +263,7 @@ function shareStore() {
         return;
     }
 
-    const url = `https://storehub.com/${username}`;
+    const url = `${window.location.origin}/${username}`;
 
     trackEvent("store_shared", {
         method: "share_button",
