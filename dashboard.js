@@ -88,7 +88,7 @@ function renderDashboard(store) {
         localStorage.getItem("storeUsername");
 
         const publicLink =
-        `${window.location.origin}/${username}`;
+        `${window.location.origin}/view-store.html?id=${storeId}`;
 
         if (typeof QRCode !== "undefined") {
 
@@ -233,7 +233,8 @@ function copyLink() {
         return;
     }
 
-    const link = `${window.location.origin}/${username}`;
+    const link =
+    `${window.location.origin}/view-store.html?id=${storeId}`;
 
     const textArea = document.createElement("textarea");
     textArea.value = link;
@@ -263,7 +264,8 @@ function shareStore() {
         return;
     }
 
-    const url = `${window.location.origin}/${username}`;
+    const url =
+    `${window.location.origin}/view-store.html?id=${storeId}`;
 
     trackEvent("store_shared", {
         method: "share_button",
