@@ -122,6 +122,24 @@ function renderDashboard(store) {
         "totalOrders",
         store.totalOrders || 0
     );
+
+    /* ONBOARDING CARD */
+
+    const welcomeCard =
+    document.querySelector(".welcome-card");
+
+    if (welcomeCard) {
+
+        if (products.length > 0) {
+
+            welcomeCard.style.display = "none";
+
+        } else {
+
+            welcomeCard.style.display = "block";
+
+        }
+}
 }
 
 /* =========================
@@ -244,7 +262,9 @@ function copyLink() {
     document.execCommand("copy");
     document.body.removeChild(textArea);
 
-    alert("Store link copied!");
+    alert(
+        "✅ Store link copied successfully!\n\nShare it with customers to start receiving orders."
+    );
 
     trackEvent("store_link_copied", {
         link
@@ -275,8 +295,8 @@ function shareStore() {
     if (navigator.share) {
 
         navigator.share({
-            title: "My Store",
-            text: "Check out my store",
+            title: "My StoreHub Store",
+            text: "Browse my products and order directly on WhatsApp.",
             url: url
         }).catch(err => console.log(err));
 

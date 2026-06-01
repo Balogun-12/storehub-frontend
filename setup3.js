@@ -101,7 +101,9 @@ fetch(`${BASE_URL}/api/product/${storeId}`, {
 
             if (result.success) {
 
-                alert("Product saved successfully");
+                alert(
+                 "🎉 Product added successfully!\n\nNext step: Go to your dashboard and click 'View Store' to see it live."
+                );
 
                 /* ✅ FIXED REDIRECT */
                 window.location.href =
