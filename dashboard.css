@@ -50,59 +50,6 @@ body{
     cursor:pointer;
 }
 
-/* =========================
-   WELCOME CARD
-========================= */
-
-.welcome-card{
-    background:linear-gradient(135deg,#4c53ff,#6a5cff);
-    color:#fff;
-    padding:20px;
-    border-radius:18px;
-    margin-bottom:22px;
-    box-shadow:0 8px 20px rgba(76,83,255,0.25);
-}
-
-.welcome-card h3{
-    margin:0 0 8px;
-    font-size:20px;
-}
-
-.welcome-card p{
-    margin:0 0 12px;
-    opacity:0.95;
-    font-size:14px;
-}
-
-.steps{
-    display:flex;
-    flex-direction:column;
-    gap:8px;
-    margin-bottom:16px;
-}
-
-.steps div{
-    background:rgba(255,255,255,0.15);
-    padding:10px;
-    border-radius:10px;
-    font-size:14px;
-}
-
-.primary-action{
-    width:100%;
-    border:none;
-    border-radius:12px;
-    padding:14px;
-    background:#fff;
-    color:#4c53ff;
-    font-size:15px;
-    font-weight:700;
-    cursor:pointer;
-}
-
-.primary-action:active{
-    transform:scale(0.98);
-}
 
 /* =========================
    DROPDOWN MENU
@@ -141,7 +88,12 @@ body{
     color:#4c53ff;
 }
 
-
+.hint-text{
+    justify-content: center;
+    text-align: center;
+    font-size: 16px;
+    font-family: Tahoma;
+}
 /* =========================
    STORE CARD (HERO SECTION)
 ========================= */
@@ -151,10 +103,11 @@ body{
     padding:18px;
     border-radius:20px;
     display:flex;
+    margin-top: 40px;
     gap:14px;
     box-shadow:0 10px 25px rgba(106,92,255,0.25);
     margin-bottom:25px;
-    align-items:flex-start;
+    align-items: flex-start;
 }
 
 
@@ -190,10 +143,9 @@ body{
 
 .store-link{
     font-size:12px;
-    margin-top:6px;
-    line-height:1.5;
+    margin-top:5px;
+    opacity:0.9;
     word-break:break-word;
-    opacity:0.95;
 }
 
 
@@ -221,6 +173,40 @@ body{
 }
 
 
+/* MAIN BUTTONS */
+.main-buttons{
+    display:flex;
+    gap:8px;
+    margin-top:10px;
+}
+
+.main-buttons button{
+    flex:1;
+    width: 100%;
+    padding:11px;
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+    font-size:12px;
+    font-weight:600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+}
+
+.main-buttons button:first-child{
+    background:#fff;
+    color:#4c53ff;
+}
+
+.main-buttons button:last-child{
+    background:#1e1e1e;
+    color:#fff;
+}
+
+
 /* =========================
    SECTION TITLE
 ========================= */
@@ -245,12 +231,11 @@ body{
 
 .product-buttons button{
     flex:1;
-    padding:14px;
+    padding:12px;
     border:none;
     border-radius:12px;
     cursor:pointer;
-    font-weight:700;
-    font-size:14px;
+    font-weight:bold;
 }
 
 .product-buttons button:first-child{
@@ -338,8 +323,8 @@ body{
 
 .card{
     background:#fff;
-    padding:14px;
-    border-radius:14px;
+    padding:12px;
+    border-radius:12px;
     box-shadow:0 4px 12px rgba(0,0,0,0.08);
 }
 .card-top{
@@ -387,23 +372,4 @@ body{
 
 .back-btn:active {
     transform: scale(0.95);
-}
-@media(max-width:480px){
-
-    .dashboard-bottom{
-        flex-direction:column;
-    }
-
-    .qr-box{
-        width:180px;
-        height:180px;
-    }
-
-    .actions{
-        flex-direction:column;
-    }
-
-    .actions button{
-        width:100%;
-    }
 }

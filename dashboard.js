@@ -122,24 +122,6 @@ function renderDashboard(store) {
         "totalOrders",
         store.totalOrders || 0
     );
-
-    /* ONBOARDING CARD */
-
-    const welcomeCard =
-    document.querySelector(".welcome-card");
-
-    if (welcomeCard) {
-
-        if (products.length > 0) {
-
-            welcomeCard.style.display = "none";
-
-        } else {
-
-            welcomeCard.style.display = "block";
-
-        }
-}
 }
 
 /* =========================

@@ -23,33 +23,23 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
         
         <!-- TOP BAR -->
         <div class="top-bar">
+
             <div class="greeting">
+
                 <button class="back-btn" onclick="goBack()">
                     <i class="fa-solid fa-arrow-left"></i>
                 </button>
 
-                <span>Hi, <span id="helloUsername"></span></span>
+                <span>
+                    Hi, <span id="helloUsername"></span>
+                </span>
+
             </div>
 
             <div class="menu-btn" onclick="toggleMenu()">
                 <i class="fa-solid fa-bars"></i>
             </div>
-        </div>
 
-        <div class="welcome-card">
-            <h3>🎉 Your Store is Ready</h3>
-
-            <p>Follow this simple flow:</p>
-
-            <div class="steps">
-                <div>➕ Add Products</div>
-                <div>👀 Preview Your Store</div>
-                <div>📤 Share Store Link</div>
-            </div>
-
-            <button class="primary-action big" onclick="viewStore()">
-                👀 Open My Store
-            </button>
         </div>
 
         <!-- DROPDOWN MENU -->
@@ -93,6 +83,10 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 
         </div>
 
+        <div class="hint-text">
+            Check your live store by clicking the “ 👀 View Store” button 
+        </div>
+
         <!-- STORE CARD -->
         <div class="store-card">
 
@@ -106,18 +100,29 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 
                 <p class="store-link">
                     <i class="fa-solid fa-globe"></i>
-                    Your store:
-                    <span id="storeLink"></span>
+                    <span id="storeLink">https://store.hub</span>
                 </p>
 
                 <div class="actions">
 
                     <button onclick="copyLink()">
-                        📋 Copy Link
+                        <i class="fa-regular fa-copy"></i> Copy link
                     </button>
 
                     <button onclick="shareStore()">
-                        📤 Share Store
+                        <i class="fa-solid fa-share"></i> Share link
+                    </button>
+
+                </div>
+
+                <div class="main-buttons">
+
+                    <button onclick="viewStore()">
+                        <i class="fa-regular fa-eye"></i> View Store
+                    </button>
+
+                    <button onclick="editProfile()">
+                        <i class="fa-regular fa-user"></i> Edit Profile
                     </button>
 
                 </div>
@@ -132,8 +137,15 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
         </div>
 
         <div class="product-buttons">
-            <button onclick="addProduct()">➕ Add Product</button>
-            <button onclick="viewUpdates()">👀 View Updates</button>
+
+            <button onclick="addProduct()">
+                <i class="fa-solid fa-plus"></i> Add Product
+            </button>
+
+            <button onclick="viewUpdates()">
+                <i class="fa-regular fa-eye"></i> View Updates
+            </button>
+
         </div>
 
         <!-- VIDEO SECTION -->
@@ -196,7 +208,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     </div>
 
 </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="https://cdnjs.Cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 <script src="dashboard.js"></script>
 
 </body>
