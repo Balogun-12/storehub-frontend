@@ -91,10 +91,8 @@ body{
 .hint-text{
     justify-content: center;
     text-align: center;
-    font-size: 12px;
-    font-family: 'Times New Roman';
-    font-style: italic;
-    color: rgb(8, 8, 177);
+    font-size: 14px;
+    font-family: 'Arial';
 }
 /* =========================
    STORE CARD (HERO SECTION)
