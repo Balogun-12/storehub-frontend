@@ -1,11 +1,11 @@
-const params = new URLSearchParams(window.location.search);
-const storeId = params.get("id");
+const username = window.location.pathname.split("/")[1];
 
-if (!storeId) {
+if (!username) {
     alert("Store not found");
     window.location.href = "/create.html";
 }
 
+let storeId;
 /* =========================
    BASE URL
 ========================= */
@@ -24,7 +24,7 @@ async function loadStore() {
            SHOW CACHED DATA FIRST
         ========================= */
 
-        const cachedStore = localStorage.getItem(`store_${storeId}`);
+        const cachedStore = localStorage.getItem(`store_${username}`);
 
         if (cachedStore) {
 
@@ -38,7 +38,7 @@ async function loadStore() {
         ========================= */
 
         const res = await fetch(
-            `${BASE_URL}/api/store/${storeId}`,
+            `${BASE_URL}/api/store/username/${username}`,
             {
                 cache: "force-cache"
             }
@@ -52,15 +52,13 @@ async function loadStore() {
         }
 
         const store = data.store;
+        storeId = store._id;
 
         /* =========================
            SAVE CACHE
         ========================= */
 
-        localStorage.setItem(
-            `store_${storeId}`,
-            JSON.stringify(store)
-        );
+        localStorage.setItem(`store_${username}`, JSON.stringify(store));
 
         /* =========================
            RENDER STORE
@@ -80,7 +78,7 @@ async function loadStore() {
 
         console.log(err);
 
-        if (!localStorage.getItem(`store_${storeId}`)) {
+        if (!localStorage.getItem(`store_${username}`)) {
             alert("Server error loading store");
         }
     }
@@ -326,7 +324,7 @@ async function refreshStore() {
     try {
 
         const res = await fetch(
-            `${BASE_URL}/api/store/${storeId}`,
+            `${BASE_URL}/api/store/username/${username}`,
             { cache: "no-store" }
         );
 
@@ -336,7 +334,7 @@ async function refreshStore() {
 
             // update cache
             localStorage.setItem(
-                `store_${storeId}`,
+                `store_${username}`,
                 JSON.stringify(data.store)
             );
 
@@ -351,8 +349,7 @@ async function refreshStore() {
 
 function copyStoreLink() {
 
-    const link =
-        `${window.location.origin}/view-store.html?id=${storeId}`;
+    const link = `${window.location.origin}/s/${username}`;
 
     navigator.clipboard.writeText(link);
 
