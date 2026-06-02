@@ -87,7 +87,7 @@ function renderDashboard(store) {
         localStorage.getItem("storeUsername");
 
         const publicLink =
-        `${window.location.origin}/${store.storeUsername}`;
+        `https://storehub-backend-1d97.onrender.com/s/${username}`;
 
         if (typeof QRCode !== "undefined") {
 
@@ -232,7 +232,7 @@ function copyLink() {
         return;
     }
 
-    const link =  `${window.location.origin}/${username}`;
+    const link = `https://storehub-backend-1d97.onrender.com/s/${username}`;
 
     const textArea = document.createElement("textarea");
     textArea.value = link;
@@ -264,7 +264,7 @@ function shareStore() {
         return;
     }
 
-    const url = `${window.location.origin}/${username}`;
+    const url = `https://storehub-backend-1d97.onrender.com/s/${username}`;
 
     trackEvent("store_shared", {
         method: "share_button",
