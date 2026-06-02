@@ -59,7 +59,7 @@ function renderDashboard(store) {
     /* STORE LINK */
 
     const storeURL =
-    `${window.location.origin}/${store.storeUsername}`;
+    `htpps://storehub.com/${store.storeUsername}`;
 
     const publicLink = storeURL;
 
