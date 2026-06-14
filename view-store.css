@@ -77,12 +77,15 @@ body{
 }
 
 .hero-content h1{
-    color:#1f2937;
-    font-size:58px;
-    line-height:0.95;
-    font-weight:700;
-    margin-bottom:10px;
-    width:90%;
+    color:#fff;
+    font-size: clamp(32px, 8vw, 58px);
+    line-height: 1;
+    font-weight: 700;
+    margin-bottom: 10px;
+    width: 90%;
+
+    word-break: break-word;
+    overflow-wrap: break-word;
 }
 
 #storeDescription{

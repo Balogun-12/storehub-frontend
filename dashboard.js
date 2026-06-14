@@ -298,7 +298,7 @@ function viewStore() {
 
 function viewUpdates() {
     window.location.href =
-    `/view-store.html?id=${storeId}`;
+    `/background.html?id=${storeId}`;
 }
 
 function toggleMenu() {
