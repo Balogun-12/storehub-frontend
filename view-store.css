@@ -77,8 +77,8 @@ body{
 }
 
 .hero-content h1{
-    color:#fff;
-    font-size: clamp(32px, 8vw, 58px);
+    color: #fff;
+    font-size: clamp(40px, 10vw, 58px);
     line-height: 1;
     font-weight: 700;
     margin-bottom: 10px;
