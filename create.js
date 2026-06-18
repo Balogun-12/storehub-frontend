@@ -16,7 +16,7 @@ async function loadStores() {
         data.stores.forEach(store => {
 
             businessesList.innerHTML += `
-                <a href="/s/${store.storeUsername}" class="store-card">
+                <a href="view-store.html?id=${store._id}" class="store-card">
 
                     <div class="store-preview"
                          style="background-image:url('${store.backgroundImage}')">
