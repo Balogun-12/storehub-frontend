@@ -16,10 +16,17 @@ async function loadStores() {
         data.stores.forEach(store => {
 
             businessesList.innerHTML += `
-                <div class="business-card">
-                    <strong>${store.businessName}</strong>
-                    <p>${store.description}</p>
-                </div>
+                <a href="/s/${store.storeUsername}" class="store-card">
+
+                    <div class="store-preview"
+                         style="background-image:url('${store.backgroundImage}')">
+                    </div>
+
+                    <div class="store-name">
+                        ${store.businessName}
+                    </div>
+
+                </a>
             `;
 
         });
