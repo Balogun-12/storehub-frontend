@@ -273,7 +273,7 @@ function shareStore() {
 
     if (navigator.share) {
     navigator.share({
-        title: "storeUsername",
+        title: "My Personal Store",
         text: "🎉✨ Welcome to my online store!\n\nBrowse my products, view prices and place your order directly on WhatsApp.",
         url: url,
     }).catch(err => console.log(err));
