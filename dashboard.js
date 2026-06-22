@@ -272,12 +272,11 @@ function shareStore() {
     });
 
     if (navigator.share) {
-
-        navigator.share({
-            title: "My Personal Store",
-            text: "🎉✨ Welcome to my online store <br> Browse my products, view prices and place your order directly on WhatsApp.",
-            url: url,
-        }).catch(err => console.log(err));
+    navigator.share({
+        title: "storeUsername",
+        text: "🎉✨ Welcome to my online store!\n\nBrowse my products, view prices and place your order directly on WhatsApp.",
+        url: url,
+    }).catch(err => console.log(err));
 
     } else {
 
